@@ -2,7 +2,7 @@
 ## Usuario Root
 `sudo su –` Habilita los permisos de usuario root.
 ```
-Sudo su -
+sudo su -
 ```
 
 ## Crear Usuarios

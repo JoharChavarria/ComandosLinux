@@ -1,5 +1,6 @@
 # Comandos del proyecto
-## Instalar un entorno gráfico ligero (XFCE)
+## Servidor pricipal
+### Instalar un entorno gráfico ligero (XFCE)
 `apt-get install lightdm xfce4 xfce4-goodies` Para instalar XFCE y demás paquetes
 
 `sudo nano /etc/lightdm/lightdm.conf` Para crear un folder llamado lightdm.conf en /etc/lightdm
@@ -14,7 +15,7 @@ systemctl reboot
 
 `systemctl isolate graphical.target` Para cambiar de interfaz a consola
 
-## Instalar VNC
+### Instalar VNC
 
 `$ sudo apt-get install --no-install-recommends ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal gnome-core` Instala todo los paquetes de Gnome debido a que ayuda VNC a funcionar adecuadamente. 
 
@@ -35,7 +36,7 @@ Parámetros de escritorio:
 
 `vncpasswd` cambia contraseña de acceso
 
-## Configurar el VNC
+### Configurar el VNC
 
 `vncserver -kill` detiene el servicio actual
 ```
@@ -63,11 +64,11 @@ Se debe cambiar la siguiente información para el comando anterior.
 `vcnserver` para iniciar una nueva sesión en el servidor
 `vncviewer [clear-linux-host-ip-address]:[fully-qualified VNC port  number]` para establecer la conexión.
 
-## Probando el servidor VCN
+### Probando el servidor VCN
 ```
 Vcnviewer 192.168.8.34
 ```
-## Instalar Firewall
+### Instalar Firewall
 
 `sudo apt install ufw` Instala los paquetes del firewall
 
@@ -82,7 +83,7 @@ sudo ufw allow 5900: 5903\udp rules updated
 `sudo ufw deny` Deshabilita el puerto 
 `sudo ufw enable` Habilita el funcionamiento del firewall 
 
-## Instalación de Webmin
+### Instalación de Webmin
 
 `sudo apt install wget apt-transport-https software-properties-common`  Instala los paquetes necesarios para la instalación
 ```
@@ -104,7 +105,7 @@ sudo apt install webmin
 sudo systemctl statis webmin 
 ```
 
-## Servidor FTP
+### Servidor FTP
 
 `sudo apt-get install vsftpd` Instala los paquetes necesarios
 ```
@@ -176,7 +177,7 @@ sudo addgroup invitados adding group invitados (GID 1007)...
 Conectarse al servidor
 
 
-## Servidor LAMP
+### Servidor LAMP
 `sudo apt install apache2` Instala los paquete necesarios
 ```
 sudo apt install apache2
@@ -187,7 +188,7 @@ Instala los paquetes de MySQL y se corre el código para terminar de configurar 
 `sudo apt install mysql-server`
 `sudo mysql_secure_installation`
 
-## Probando MySQL:
+### Probando MySQL:
 `Sudo mysql`
 ```
 sudo mysql
@@ -196,15 +197,15 @@ sudo mysql
 ```
 sudo systemctl start mysql 
 ```
-## Instalando PHP 
+### Instalando PHP 
 `sudo apt install php libapache2-mod-php php-mysql`  Instalalos paquetes necesrios de PHP.
 ```
 php -v 
 ```
-## Instalando MariaDB
+### Instalando MariaDB
 `sudo apt install mariadb-server`` instala los paquetes necesarios.
 
-## Wordpress
+### Wordpress
 `wget -c http://wordpress.org/latest.tar.gz` Descarga los paquetes necesarios para utilizar wordpress.
 
 `tar -xzvf latest.tar.gz` extrae los paquetes necesarios.
@@ -234,13 +235,13 @@ Se reinicia los servios para aplicar los cambios
 `$ sudo systemctl restart mysql.service`
 
 
-## Conectado el servidor principal a VPN
+### Conectado el servidor principal a VPN
 `sudo apt install openvpn openvpn-systemd-resolved` Instalar el VPN
 ```
 sudo apt install openvpn openvpn-systemd-resolved 
 ```
 
-## Servicio Proxy
+### Servicio Proxy
 `sudo apt-get install squid3` Instalar paquetes del servicio de proxy. 
 ```
 sufo apt-get install squid3

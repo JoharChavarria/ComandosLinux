@@ -10,6 +10,7 @@ sudo su -
 ```
 subo useradd -m marcec639
 ```
+
 `sudo passwd usuarionuevo` Establece una contraseña para el usuario
 ```
 subo passwd marcec639 
@@ -42,6 +43,7 @@ En una terminal de Linux se instala mdadm para crear el RAID
 ```
 sudo apt install mdadm 
 ```
+
 `Sudo fdisk -l` muestra la lista de discos conectados a la máquina
 
 `sudo mdadm --create /dev/md/RAIDdisk: raid5 --level=raid5 --raid-device=4 /dev/sde /dev/sdd /dev/sdc /dev/sdb` crea el RAID 
@@ -55,7 +57,6 @@ sudo mdadm -D /dev/md/RAIDdisk\:raid5
 ```
 
 `sudo mkfs.ext4 /dev/md/RAIDdisk\:raid5` Cambia el formato del RAID a uno nativo de Linux 
-
 ````
 sudo mkfs.ext4 /dev/md/RAIDdisk\:raid5
 ````
@@ -79,6 +80,103 @@ dpkg -i google-chrome-stable_current_amd64.deb
 ```
 `grep <string>`  muestra un string del comando anterior o de un ruta especificada 
 ```
+
+is \tmp | grep texto3. txt 
+```
+`rm <ruta del archivo a borrar>` borra un archivo
+```
+rm \tmp\ texto3.txt
+```
+
+`rm <ruta> -R` Borra un elemento sin importar su origen y de manera recursiva con su contenido 
+```
+rm prueba -R
+```
+
+`rm <ruta> -RF`  El parámetro F fuerza el borrado de todos los elementos 
+`SCP <ruta del archivo a copiar> <usuario remoto>@<direccion ip/DNS del equipo donde está el archivo>:<Dirección donde se quiere copiar el archivo>`  copia un archivo hacia una localidad remota 
+```
+scp texto.txt mortasoft@192.168.1.184:\home\mortasoft\semana09\texto.txt
+```
+
+`wget <ruta web del archivo>` Extrae archivos desde una página web 
+```
+wger https:\\mirrors.ucr.ac.cr\ubuntu-cd\20.04.3\ubuntu-20.04.3-des 
+```
+
+`git clone <url a clonar>` Copia y descarga un repositorio de github
+```
+git clone https:\\github.com\mortasoft\linux-scripts
+```
+
+`Curl -x Get -L <URL>` Hace un API GET en la URL especificada 
+```
+Curl -x Get -L https\\script.google.com\macros\s\AKfycbyó1tcPuNY3dw_31YqNGFnR6Ei55MrLFPe_PHup_VMnGP07HeoRyIy5W8xLrheMB7vJ\exec?data=$nombre 
+```
+
+`wc <ruta>` hace conteo de palabras
+cantidad de líneas, palabras y caracteres 
+```
+wc\var\log\syslog1583 \var\log\syslog 
+```
+
+`wc <Ruta> -m` sólo caracteres
+``` 
+wc \var\log\syslog-m 199614 \var\log\syslog
+```
+
+`Head <ruta>` muestra la primera parte o líneas de un texto 
+```
+ head \var\log\syslong
+```
+
+`Head <ruta> -n 3` Solo muestra las primeras 3 líneas
+```
+head \var\logsyslog 
+```
+
+`more <ruta>` Muestra un archivo linea a linea 
+```
+more \var\log\syslog
+```
+
+`cat  <ruta>` Muestra todo el contenido de un archivo
+```
+cat \var\log\syslog
+```
+
+` find <ruta> -name <lo que se va a buscar>` busca un un ruta un archivo con el nombre especificado 
+```
+find\home\jchavarriac400\-name index.html 
+```
+## System
+`reboot` reinicia el equipo a la fuerza
+`shutdown` apaga el equipo a la fuerza 
+
+## PDF
+`pdfunite <pdf> <pdf> <pdf> <nombre del pfd final>` Une varios PDFs en uno
+```
+pdfunite 1.pdf 2.pdf result.pdf 
+```
+
+`pdfseparate -f <rango de páginas> <archivo a separar> <nombre del pdf de resultado>` separar un PDF en un rango de páginas especificado.
+```
+pdfseparate -f 1 -L 5 salida.pdf resultado_%d.pdf
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

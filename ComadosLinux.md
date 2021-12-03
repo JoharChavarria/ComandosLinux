@@ -27,36 +27,37 @@ subo apt update
 
 `sudo mount -t tmpfs -o size=1024m new_ram_disk /mnt/ram_disk` Crea un espacio de almacenamiento en la memoria RAM
 
-`cat /proc/sys/vm/swappiness` Configura el uso de la memoria Swap
+`cat <ruta>` Configura el uso de la memoria Swap
+```
+cat /proc/sys/vm/swappiness
+```
 
 `free -h` Ver memoria libre
 
 `swapon` Ver prioridad
 
 `df -h` ver todos los discos y particiones
-Creación de RAID Linux 
-Se crean los discos duros
+
 
 ## RAID 5
 En una terminal de Linux se instala mdadm para crear el RAID
-`sudo apt install mdadm`
 ```
 sudo apt install mdadm 
 ```
 
 `Sudo fdisk -l` muestra la lista de discos conectados a la máquina
 
-`sudo mdadm --create /dev/md/RAIDdisk: raid5 --level=raid5 --raid-device=4 /dev/sde /dev/sdd /dev/sdc /dev/sdb` crea el RAID 
+`sudo mdadm --create <ruta donde se creará el RAID>: raid5 --level=<nivel del RAID> --raid-device=<Cantidad de dispositivos> <rutas de los dispositivos>` crea el RAID 
 ```
 sudo mdadm --create /dev/md/RAIDdisk: raid5 --level=raid5 --raid-device=4 /dev/sde /dev/sdd /dev/sdc /dev/sdb` crea el RAID 
 ```
 
-`sudo mdadm -D /dev/md/RAIDdisk\:raid5` Para examinar y ver el proceso de creación del RAID
+`sudo mdadm -D <ruta del RAID>` Para examinar y ver el proceso de creación del RAID
 ```
 sudo mdadm -D /dev/md/RAIDdisk\:raid5
 ```
 
-`sudo mkfs.ext4 /dev/md/RAIDdisk\:raid5` Cambia el formato del RAID a uno nativo de Linux 
+`sudo <Formato> <Ruta del RAID>` Cambia el formato del RAID a uno nativo de Linux 
 ````
 sudo mkfs.ext4 /dev/md/RAIDdisk\:raid5
 ````
@@ -72,17 +73,21 @@ Cp texto.txt texto3. txt
 MV texto3. txt \tmp
 ```
 
-`Nano file.sh` Crea un archivo para editar`
+`Nano <Nombre del archivo y extension` Crea un archivo para editar`
+```
+Nano text.txt
+```
 
 `dpkg`  es para instalar paquetes mediante de la terminal
 ```
 dpkg -i google-chrome-stable_current_amd64.deb
 ```
+
 `grep <string>`  muestra un string del comando anterior o de un ruta especificada 
 ```
-
 is \tmp | grep texto3. txt 
 ```
+
 `rm <ruta del archivo a borrar>` borra un archivo
 ```
 rm \tmp\ texto3.txt
@@ -94,6 +99,10 @@ rm prueba -R
 ```
 
 `rm <ruta> -RF`  El parámetro F fuerza el borrado de todos los elementos 
+```
+rm ./text.txt
+```
+
 `SCP <ruta del archivo a copiar> <usuario remoto>@<direccion ip/DNS del equipo donde está el archivo>:<Dirección donde se quiere copiar el archivo>`  copia un archivo hacia una localidad remota 
 ```
 scp texto.txt mortasoft@192.168.1.184:\home\mortasoft\semana09\texto.txt
@@ -151,6 +160,7 @@ find\home\jchavarriac400\-name index.html
 ```
 ## System
 `reboot` reinicia el equipo a la fuerza
+
 `shutdown` apaga el equipo a la fuerza 
 
 ## PDF

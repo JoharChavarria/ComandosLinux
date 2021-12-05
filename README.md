@@ -48,7 +48,7 @@ cat /proc/sys/vm/swappiness
 `df -h` ver todos los discos y particiones
 
 `sudo mount`sirve para montar datos
-```sudo mount /dev/sdb1 /mnt/media```
+``` sudo mount /dev/sdb1 /mnt/media ```
 
 `ps -aux` sirve para ver todos los Ids de los programas o los procesos
 
@@ -160,11 +160,14 @@ find\home\jchavarriac400\-name index.html
 `touch <ruta del archivo>` actualiza la fecha de modificacion del archivo especificado
 ```touch /home/jchavarriac400/text```
 
+
 `du -h <ruta del archivo>` uestra el tamaño del archivo
 ```du -h /home/jchavarriac400/text```
 
-`stat <ruta del archivo>`muestra la fecha de creación de un archivo 
+
+`stat <ruta del archivo>`muestra la fecha de creación de un archivo
 ```stat /home/jchavarriac400/text```
+
 
 ## Archivos en red 
 `SCP <ruta del archivo a copiar> <usuario remoto>@<direccion ip/DNS del equipo donde está el archivo>:<Dirección donde se quiere copiar el archivo>`  copia un archivo hacia una localidad remota 

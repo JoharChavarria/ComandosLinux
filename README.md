@@ -47,15 +47,11 @@ cat /proc/sys/vm/swappiness
 
 `df -h` ver todos los discos y particiones
 
-`sudo mount`sirve para montar datos
-``` sudo mount /dev/sdb1 /mnt/media ```
-
 `ps -aux` sirve para ver todos los Ids de los programas o los procesos
 
-`Kill -9 PID` Mata o termina un proceso 
-```kill -9 3139```
+`Kill -9 PID` Mata o termina un proceso  ```Kill -9 PID```
 
-
+`sudo mount` sirve para montar datos  ```sudo mount /dev/sdb1 /mnt/media```
 
 ## RAID 5
 En una terminal de Linux se instala mdadm para crear el RAID
@@ -157,16 +153,13 @@ find\home\jchavarriac400\-name index.html
 `file <ruta del archivo>` muestra el formato de un archivo
 ```file /home/jchavarriac400/text``` 
 
-`touch <ruta del archivo>` actualiza la fecha de modificacion del archivo especificado
-```touch /home/jchavarriac400/text```
+`touch <ruta del archivo>` actualiza la fecha de modificacion del archivo especificado ```touch /home/jchavarriac400/text```
 
 
-`du -h <ruta del archivo>` uestra el tamaño del archivo
-```du -h /home/jchavarriac400/text```
+`du -h <ruta del archivo>` uestra el tamaño del archivo ```du -h /home/jchavarriac400/text```
 
 
-`stat <ruta del archivo>`muestra la fecha de creación de un archivo
-```stat /home/jchavarriac400/text```
+`stat <ruta del archivo>`muestra la fecha de creación de un archivo ```stat /home/jchavarriac400/text```
 
 
 ## Archivos en red 

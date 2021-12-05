@@ -203,7 +203,7 @@ sudo systemctl start mysql
 php -v 
 ```
 ### Instalando MariaDB
-`sudo apt install mariadb-server`` instala los paquetes necesarios.
+`sudo apt install mariadb-server` instala los paquetes necesarios.
 
 ### Wordpress
 `wget -c http://wordpress.org/latest.tar.gz` Descarga los paquetes necesarios para utilizar wordpress.

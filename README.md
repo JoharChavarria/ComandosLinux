@@ -1,5 +1,6 @@
 # ComandosLinux
 [Comandos del Proyecto](https://github.com/JoharChavarria/ComandosLinux/blob/main/ComadosProyecto.md)
+
 [Comandos Docker](https://github.com/JoharChavarria/ComandosLinux/blob/main/comandosDocker.md)
 
 ## Usuario Root
@@ -7,6 +8,7 @@
 ```
 sudo su - 
 ```
+
 
 ## Crear Usuarios
 `sudo sueradd -m usuarionuevo` Crea un nuevo usuario y al utilizar el parámetro `-m` permite que se creen las carpetas de usuario de manera automática. 
@@ -19,11 +21,15 @@ subo useradd -m marcec639
 subo passwd marcec639 
 ````
 
+
+
 ## Actualizar todos los paquetes 
 `subo apt update` Actualiza todos los paquetes 
 ```
 subo apt update 
 ```
+
+
 
 ## Memoria y Almacenamiento 
 `for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | lesser` Ver la memoria swap en uso
@@ -40,6 +46,8 @@ cat /proc/sys/vm/swappiness
 `swapon` Ver prioridad
 
 `df -h` ver todos los discos y particiones
+
+
 
 
 ## RAID 5
@@ -64,6 +72,8 @@ sudo mdadm -D /dev/md/RAIDdisk\:raid5
 ````
 sudo mkfs.ext4 /dev/md/RAIDdisk\:raid5
 ````
+
+
 
 ## Archivos
 `Cp <nombre del archivo a copiar> <nombre de la copia>` Copia un archivo 
@@ -96,12 +106,12 @@ is \tmp | grep texto3. txt
 rm \tmp\ texto3.txt
 ```
 
-`rm <ruta> -R` Borra un elemento sin importar su origen y de manera recursiva con su contenido 
+- `rm <ruta> -R` Borra un elemento sin importar su origen y de manera recursiva con su contenido 
 ```
 rm prueba -R
 ```
 
-`rm <ruta> -RF`  El parámetro F fuerza el borrado de todos los elementos 
+- `rm <ruta> -RF`  El parámetro F fuerza el borrado de todos los elementos 
 ```
 rm ./text.txt
 ```
@@ -132,7 +142,7 @@ cantidad de líneas, palabras y caracteres
 wc\var\log\syslog1583 \var\log\syslog 
 ```
 
-`wc <Ruta> -m` sólo caracteres
+-`wc <Ruta> -m` sólo caracteres
 ``` 
 wc \var\log\syslog-m 199614 \var\log\syslog
 ```
@@ -142,10 +152,10 @@ wc \var\log\syslog-m 199614 \var\log\syslog
  head \var\log\syslong
 ```
 
-`Head <ruta> -n 3` Solo muestra las primeras 3 líneas
-```
-head \var\logsyslog 
-```
+- `Head <ruta> -n 3` Solo muestra las primeras 3 líneas
+ ```
+ head \var\logsyslog 
+ ```
 
 `more <ruta>` Muestra un archivo linea a linea 
 ```
@@ -161,10 +171,14 @@ cat \var\log\syslog
 ```
 find\home\jchavarriac400\-name index.html 
 ```
+
+
 ## System
 `reboot` reinicia el equipo a la fuerza
 
 `shutdown` apaga el equipo a la fuerza 
+
+
 
 ## PDF
 `pdfunite <pdf> <pdf> <pdf> <nombre del pfd final>` Une varios PDFs en uno

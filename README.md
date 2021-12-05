@@ -105,16 +105,10 @@ is \tmp | grep texto3. txt
 ```
 rm \tmp\ texto3.txt
 ```
+- `-R` Borra un elemento sin importar su origen y de manera recursiva con su contenido ```rm prueba -R```
 
-- `rm <ruta> -R` Borra un elemento sin importar su origen y de manera recursiva con su contenido 
-```
-rm prueba -R
-```
+- `-RF`  El parámetro F fuerza el borrado de todos los elementos ```rm ./text.txt -RF```
 
-- `rm <ruta> -RF`  El parámetro F fuerza el borrado de todos los elementos 
-```
-rm ./text.txt
-```
 
 `SCP <ruta del archivo a copiar> <usuario remoto>@<direccion ip/DNS del equipo donde está el archivo>:<Dirección donde se quiere copiar el archivo>`  copia un archivo hacia una localidad remota 
 ```
@@ -141,21 +135,17 @@ cantidad de líneas, palabras y caracteres
 ```
 wc\var\log\syslog1583 \var\log\syslog 
 ```
+- `-l` sólo líneas ¨`wc \var\log\syslog-l 199614 \var\log\syslog`
+- `-w` sólo palabras ¨`wc \var\log\syslog-w 199614 \var\log\syslog`
+- `-m` sólo caracteres `wc \var\log\syslog-m 199614 \var\log\syslog`
 
--`wc <Ruta> -m` sólo caracteres
-``` 
-wc \var\log\syslog-m 199614 \var\log\syslog
-```
 
 `Head <ruta>` muestra la primera parte o líneas de un texto 
 ```
  head \var\log\syslong
 ```
+- `-n #` Solo muestra las primeras lineas del archivo según el número especificado `head \var\logsyslog` 
 
-- `Head <ruta> -n 3` Solo muestra las primeras 3 líneas
- ```
- head \var\logsyslog 
- ```
 
 `more <ruta>` Muestra un archivo linea a linea 
 ```

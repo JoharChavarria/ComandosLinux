@@ -1,4 +1,7 @@
 # ComandosLinux
+[Comandos del Proyecto](https://github.com/JoharChavarria/ComandosLinux/blob/main/ComadosProyecto.md)
+[Comandos Docker](https://github.com/JoharChavarria/ComandosLinux/blob/main/comandosDocker.md)
+
 ## Usuario Root
 `sudo su –` Habilita los permisos de usuario root.
 ```
